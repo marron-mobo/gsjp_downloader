@@ -1,25 +1,25 @@
 @echo off
 setlocal
-chcp 65001 >nul
 
 set BASE=%APPDATA%\Virtuali\GSX\MSFS
 set TEMP=%BASE%\.temp
 
 echo ==========================================
-echo GSJPãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ï¼ˆéžå…¬å¼ï¼‰
+echo GSJPƒvƒƒtƒ@ƒCƒ‹ƒ_ƒEƒ“ƒ[ƒhi”ñŒöŽ®j
 echo.
-echo é‡è¦
-echo gsjpã®ãƒ•ã‚¡ã‚¤ãƒ«ã§ã€ã”è‡ªèº«ã§ç·¨é›†ã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ã¯ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã—ã¦ãã ã•ã„
-echo ç†Šæœ¬ snjsimã€åˆ©å°» Gate15(v2) ç”¨ã¯å‰Šé™¤ã•ã‚Œã¾ã™
-echo ç·¨é›†ã™ã‚‹å ´åˆã¯ã€ã“ã®batã‚’å³ã‚¯ãƒªãƒƒã‚¯â†’ç·¨é›†ã—ã¦
-echo rem è¡Œï¼ˆã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆï¼‰ã®æŒ‡ç¤ºã«å¾“ã£ã¦ãã ã•ã„
+echo ššd—všš
+echo gsjp‚Ìƒtƒ@ƒCƒ‹‚ÅA‚²Ž©g‚Å•ÒW‚³‚ê‚Ä‚¢‚é‚à‚Ì‚ÍƒoƒbƒNƒAƒbƒv‚µ‚Ä‚­‚¾‚³‚¢
+echo ŒF–{ snjsimA—˜K Gate15(v2) —p‚Ííœ‚³‚ê‚Ü‚·
+echo •ÒW‚·‚éê‡‚ÍA‚±‚Ìbat‚ð‰EƒNƒŠƒbƒN¨•ÒW‚µ‚Ä
+echo rem siƒRƒƒ“ƒgƒAƒEƒgj‚ÌŽwŽ¦‚É]‚Á‚Ä‚­‚¾‚³‚¢
 echo.
-echo ç†Šæœ¬ keisimã€åˆ©å°» Marin / Gate15(v1) ç”¨ã¯å‰Šé™¤ã•ã‚Œã¾ã›ã‚“
-echo gsjpé…ä¸‹ã§ãªã„ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ã‚‚å‰Šé™¤ã•ã‚Œã¾ã›ã‚“ï¼‰
+echo i”õlj
+echo ŒF–{ keisimA—˜K Marin / Gate15(v1) —p‚Ííœ‚³‚ê‚Ü‚¹‚ñ
+echo gsjp”z‰º‚Å‚È‚¢ƒvƒƒtƒ@ƒCƒ‹‚àíœ‚³‚ê‚Ü‚¹‚ñ
 echo ==========================================
 echo.
-echo å®Ÿè¡Œã™ã‚‹ã«ã¯ Enter ã‚’æŠ¼ã—ã¦ãã ã•ã„
-echo ä¸­æ­¢ã™ã‚‹å ´åˆã¯ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’é–‰ã˜ã¦ãã ã•ã„
+echo ŽÀs‚·‚é‚É‚Í Enter ‚ð‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢
+echo ’†Ž~‚·‚éê‡‚ÍƒEƒBƒ“ƒhƒE‚ð•Â‚¶‚Ä‚­‚¾‚³‚¢
 pause >nul
 
 if exist "%TEMP%" rd /s /q "%TEMP%"
@@ -28,34 +28,34 @@ mkdir "%TEMP%" || goto :error
 cd /d "%TEMP%" || goto :error
 
 echo.
-echo GitHub ã‹ã‚‰ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ä¸­...
+echo GitHub ‚©‚çƒ_ƒEƒ“ƒ[ƒh’†...
 git clone https://github.com/GroundServicesJP/GroundServicesJP_GSXProfiles.git
 if errorlevel 1 goto :error
 
 echo.
-echo ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é…ç½®ä¸­...
+echo ƒtƒ@ƒCƒ‹‚ð”z’u’†...
 move "%TEMP%\GroundServicesJP_GSXProfiles\*" "%BASE%\" >nul
 
 rd /s /q "%TEMP%"
 
 cd /d "%BASE%"
 
-rem snjsimç‰ˆãŠä½¿ã„ã®éš›ã¯ã€snjsim â†’ keisim ã«å¤‰æ›´ã—ã¦ãã ã•ã„
+rem snjsim”Å‚¨Žg‚¢‚ÌÛ‚ÍAsnjsim ¨ keisim ‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢
 del rjft-snjsim.py 2>nul
 del rjft-snjsim.ini 2>nul
 
-rem Gate15_v2ç‰ˆãŠä½¿ã„ã®éš›ã¯ã€g15v2 â†’ g15_marin ã«å¤‰æ›´ã—ã¦ãã ã•ã„
+rem Gate15_v2”Å‚¨Žg‚¢‚ÌÛ‚ÍAg15v2 ¨ g15_marin ‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢
 del rjer-g15v2.py 2>nul
 del rjer-g15v2.ini 2>nul
 
 echo.
-echo å®Œäº†ã—ã¾ã—ãŸ
+echo Š®—¹‚µ‚Ü‚µ‚½
 goto :end
 
 :error
 echo.
-echo [ERROR] å‡¦ç†ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ
-echo é€”ä¸­ã§ä¸­æ–­ã•ã‚Œã¦ã„ã¾ã™ã€‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç¢ºèªã—ã¦ãã ã•ã„
+echo [ERROR] ˆ—’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½
+echo “r’†‚Å’†’f‚³‚ê‚Ä‚¢‚Ü‚·Bƒtƒ@ƒCƒ‹‚ðŠm”F‚µ‚Ä‚­‚¾‚³‚¢
 pause
 
 :end
