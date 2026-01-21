@@ -36,9 +36,8 @@ echo.
 echo ファイルを配置中...
 move "%TEMP%\GroundServicesJP_GSXProfiles\*" "%BASE%\" >nul
 
-rd /s /q "%TEMP%"
-
 cd /d "%BASE%"
+rd /s /q "%TEMP%"
 
 rem snjsim版お使いの際は、snjsim → keisim に変更してください
 del rjft-snjsim.py 2>nul
